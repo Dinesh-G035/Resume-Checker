@@ -1,14 +1,8 @@
-// PDF text extraction wrapper using pdfjs-dist
-import * as pdfjsLib from 'pdfjs-dist';
+import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf";
+import workerSrc from "pdfjs-dist/legacy/build/pdf.worker?url";
 
-// Set worker source
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
 
-/**
- * Extract text from a PDF file
- * @param {File} file - PDF file object
- * @returns {Promise<string>} extracted text
- */
 export const parsePDF = async (file) => {
   try {
     const arrayBuffer = await file.arrayBuffer();
@@ -27,7 +21,15 @@ export const parsePDF = async (file) => {
     return textParts.join('\n\n');
   } catch (error) {
     console.error('PDF parsing error:', error);
-    throw new Error('Failed to parse PDF file. Please ensure the file is a valid PDF.');
+    console.error('Detailed PDF parsing error:', error);
+    if (error.name === 'PasswordException') {
+      throw new Error('PDF is password protected. Please remove password and try again.');
+    } else if (error.name === 'MissingPDFException') {
+      throw new Error('Invalid PDF file. Please check the file.');
+    } else if (error.name === 'UnexpectedError') {
+      throw new Error('PDF parsing failed. The file may be corrupted or encrypted.');
+    }
+    throw new Error(`Failed to parse PDF: ${error.message}. Please try a different file.`);
   }
 };
 

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import * as pdfjsLib from 'pdfjs-dist';
+import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf';
+import workerSrc from 'pdfjs-dist/legacy/build/pdf.worker?url';
 
-// Set worker source - use a specific version that works
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js`;
-
+pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
 const PDFPreview = ({ file, onTextExtracted }) => {
   const [pdfPages, setPdfPages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
