@@ -1,4 +1,3 @@
-// Custom hook: Job Description matching
 import { useCallback } from 'react';
 import { useAnalysis } from '../context/AnalysisContext';
 import { compareKeywords, extractCustomKeywords } from '../utils/keywordExtractor';

@@ -1,4 +1,3 @@
-// Custom hook: Calculate ATS score
 import { useCallback } from 'react';
 import { useResume } from '../context/ResumeContext';
 import { useAnalysis } from '../context/AnalysisContext';

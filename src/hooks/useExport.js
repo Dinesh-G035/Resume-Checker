@@ -1,4 +1,3 @@
-// Custom hook: Export resume as PDF
 import { useCallback } from 'react';
 import { jsPDF } from 'jspdf';
 import { saveAs } from 'file-saver';

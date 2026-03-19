@@ -1,15 +1,6 @@
-// AI Service — Direct API calls for AI-powered suggestions
-// Supports OpenAI and Claude APIs
-
 const AI_API_KEY = import.meta.env.VITE_AI_API_KEY;
 const AI_PROVIDER = import.meta.env.VITE_AI_PROVIDER || 'openai';
 
-/**
- * Get AI-powered suggestions for resume improvement
- * @param {string} resumeText - Resume content
- * @param {string} jobDescription - Optional job description for targeted suggestions
- * @returns {Promise<Object>} AI suggestions
- */
 export const getAISuggestions = async (resumeText, jobDescription = '') => {
   if (!AI_API_KEY || AI_API_KEY === 'your_api_key_here') {
     return getFallbackSuggestions(resumeText, jobDescription);

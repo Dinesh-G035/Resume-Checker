@@ -1,5 +1,3 @@
-// Industry keyword dictionaries for resume analysis
-
 export const TECH_KEYWORDS = {
   programming: [
     'javascript', 'python', 'java', 'c++', 'c#', 'typescript', 'ruby', 'go', 'golang',

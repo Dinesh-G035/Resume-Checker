@@ -5,9 +5,7 @@ import { extractKeywords } from './keywordExtractor';
 import { countWords, getLines } from './textCleaner';
 import { SECTION_NAMES } from '../constants/atsRules';
 
-/**
- * Calculate formatting score
- */
+
 const calculateFormattingScore = (text) => {
   let score = 0;
   const lowerText = text.toLowerCase();
@@ -41,9 +39,7 @@ const calculateFormattingScore = (text) => {
   return Math.min(100, score);
 };
 
-/**
- * Calculate content quality score
- */
+
 const calculateContentScore = (text) => {
   let score = 0;
   const lowerText = text.toLowerCase();
@@ -75,9 +71,7 @@ const calculateContentScore = (text) => {
   return Math.min(100, score);
 };
 
-/**
- * Calculate keyword score with job-specific matching
- */
+
 const calculateKeywordScore = (text, jobDescription = '') => {
   const keywords = extractKeywords(text);
   let total = keywords.all.length;
@@ -118,9 +112,7 @@ const calculateKeywordScore = (text, jobDescription = '') => {
   return Math.min(100, baseScore + jobMatchScore);
 };
 
-/**
- * Calculate experience score
- */
+
 const calculateExperienceScore = (text) => {
   let score = 0;
 
@@ -143,9 +135,7 @@ const calculateExperienceScore = (text) => {
   return Math.min(100, score);
 };
 
-/**
- * Calculate job-specific match score
- */
+
 const calculateJobMatchScore = (text, jobDescription = '') => {
   if (!jobDescription || !jobDescription.trim()) {
     return { matchScore: 0, matchedKeywords: [], missingKeywords: [], hasJobDescription: false };
@@ -191,12 +181,7 @@ const calculateJobMatchScore = (text, jobDescription = '') => {
   };
 };
 
-/**
- * Calculate the overall resume score with full breakdown
- * @param {string} text - Resume text
- * @param {string} jobDescription - Optional job description for job-specific scoring
- * @returns {Object} complete scoring breakdown
- */
+
 export const calculateOverallScore = (text, jobDescription = '') => {
   if (!text || text.trim().length === 0) {
     return {

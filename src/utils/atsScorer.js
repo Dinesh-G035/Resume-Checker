@@ -1,11 +1,7 @@
-// ATS Scoring Engine — evaluates resume against ATS rules
 import { ATS_RULES, SECTION_NAMES } from '../constants/atsRules';
 import { countWords } from './textCleaner';
 import { extractKeywords } from './keywordExtractor';
 
-/**
- * Evaluate a single ATS rule against resume text
- */
 const evaluateRule = (rule, text, lowerText, jobDescription = '') => {
   const result = { id: rule.id, label: rule.label, description: rule.description, passed: false, score: 0, maxScore: rule.score, feedback: '' };
 
@@ -265,12 +261,7 @@ const evaluateRule = (rule, text, lowerText, jobDescription = '') => {
   return result;
 };
 
-/**
- * Calculate full ATS score for a resume
- * @param {string} text - Resume text
- * @param {string} jobDescription - Optional job description for job-specific scoring
- * @returns {Object} detailed ATS score breakdown
- */
+
 export const calculateATSScore = (text, jobDescription = '') => {
   if (!text || text.trim().length === 0) {
     return { totalScore: 0, categories: {}, ruleResults: [], passed: false };

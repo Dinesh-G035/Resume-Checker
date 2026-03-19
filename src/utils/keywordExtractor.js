@@ -1,11 +1,6 @@
 // Keyword extraction utilities
 import { ALL_KEYWORDS, TECH_KEYWORDS, SOFT_SKILLS, CERTIFICATIONS } from '../constants/keywords';
 
-/**
- * Extract all matching keywords from text
- * @param {string} text - Resume text
- * @returns {Object} categorized keywords found
- */
 export const extractKeywords = (text) => {
   if (!text) return { technical: [], soft: [], certifications: [], all: [] };
 
@@ -49,12 +44,6 @@ export const extractKeywords = (text) => {
   return found;
 };
 
-/**
- * Extract keywords from a job description and compare with resume
- * @param {string} resumeText
- * @param {string} jobDescription
- * @returns {Object} matching, missing, and extra keywords
- */
 export const compareKeywords = (resumeText, jobDescription) => {
   const resumeKeywords = extractKeywords(resumeText);
   const jobKeywords = extractKeywords(jobDescription);
@@ -76,11 +65,6 @@ export const compareKeywords = (resumeText, jobDescription) => {
   };
 };
 
-/**
- * Extract custom keywords from a job description text (beyond dictionary)
- * @param {string} text
- * @returns {string[]} extracted keywords & phrases
- */
 export const extractCustomKeywords = (text) => {
   if (!text) return [];
 

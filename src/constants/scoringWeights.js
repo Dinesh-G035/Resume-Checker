@@ -1,5 +1,3 @@
-// Scoring weights for resume evaluation categories
-
 export const SCORING_WEIGHTS = {
   formatting: {
     weight: 0.15,

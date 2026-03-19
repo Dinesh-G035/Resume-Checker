@@ -1,5 +1,3 @@
-// ATS Rules Engine — defines the rules used to evaluate resume ATS compatibility
-
 export const ATS_RULES = {
   formatting: {
     weight: 0.2,
