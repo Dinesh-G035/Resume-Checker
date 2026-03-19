@@ -19,10 +19,10 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-glow group-hover:shadow-glow-accent transition-shadow duration-300">
-              <span className="text-white font-bold text-sm">RC</span>
+              <span className="text-white font-bold text-sm">CV</span>
             </div>
             <span className="font-display font-bold text-lg bg-gradient-to-r from-white to-surface-300 bg-clip-text text-transparent">
-              ResumeChecker
+              CVCracker
             </span>
           </Link>
 
