@@ -55,12 +55,7 @@ const AnalysisPage = () => {
 
         {/* Quick action buttons */}
         <div className="flex flex-wrap gap-3 mb-8">
-          <button
-            onClick={() => navigate('/editor')}
-            className="px-5 py-2.5 rounded-xl bg-primary-500/10 border border-primary-500/20 text-primary-300 text-sm font-medium hover:bg-primary-500/20 transition-all"
-          >
-            ✏️ Edit Resume
-          </button>
+          
           <button
             onClick={() => navigate('/job-match')}
             className="px-5 py-2.5 rounded-xl bg-accent-500/10 border border-accent-500/20 text-accent-300 text-sm font-medium hover:bg-accent-500/20 transition-all"

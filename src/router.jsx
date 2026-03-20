@@ -3,7 +3,6 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import HomePage from './pages/HomePage';
 import AnalysisPage from './pages/AnalysisPage';
-import EditorPage from './pages/EditorPage';
 import JobMatchPage from './pages/JobMatchPage';
 
 const router = createBrowserRouter(
@@ -14,7 +13,6 @@ const router = createBrowserRouter(
       children: [
         { index: true, element: <HomePage /> },
         { path: 'analysis', element: <AnalysisPage /> },
-        { path: 'editor', element: <EditorPage /> },
         { path: 'job-match', element: <JobMatchPage /> },
       ],
     },

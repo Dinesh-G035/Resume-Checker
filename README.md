@@ -1,4 +1,4 @@
-# ATS Resume Checker
+# ATS CVCracker
 
 
 A powerful, client-side web application built with React and Vite that analyzes, scores, and optimizes resumes against Applicant Tracking System (ATS) algorithms. It provides job seekers with real-time feedback, keyword analysis, and formatting suggestions to ensure their resume gets past automated scanners.

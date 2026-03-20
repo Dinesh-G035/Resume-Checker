@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 const navLinks = [
   { path: '/', label: 'Home', icon: '🏠' },
   { path: '/analysis', label: 'Analysis', icon: '📊' },
-  { path: '/editor', label: 'Editor', icon: '✏️' },
   { path: '/job-match', label: 'Job Match', icon: '🎯' },
 ];
 

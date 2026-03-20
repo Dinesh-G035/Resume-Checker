@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* =========================================
-   Global Styles — Resume Checker
+   Global Styles — CVCracker
    ========================================= */
 
 /* Smooth scrolling */
@@ -16,13 +16,16 @@ html {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #334155;
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #475569;
 }
@@ -30,6 +33,7 @@ html {
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #1e293b;
   border-radius: 2px;
@@ -69,6 +73,7 @@ body {
   .gradient-border {
     position: relative;
   }
+
   .gradient-border::before {
     content: '';
     position: absolute;
@@ -91,9 +96,17 @@ body {
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* =========================================
@@ -126,6 +139,7 @@ input:focus {
   opacity: 0;
   transform: translateY(10px);
 }
+
 .page-enter-active {
   opacity: 1;
   transform: translateY(0);

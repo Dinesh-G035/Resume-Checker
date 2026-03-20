@@ -160,7 +160,6 @@ const HomePage = () => {
                     { icon: '💡', title: 'Smart Suggestions', desc: 'Actionable improvements for each section', color: 'primary' },
                     { icon: '📈', title: 'Visual Analytics', desc: 'Charts showing strengths & gaps at a glance', color: 'accent' },
                     { icon: '🎯', title: 'Job Matching', desc: 'Compare your resume against job descriptions', color: 'primary' },
-                    { icon: '✏️', title: 'Inline Editor', desc: 'Edit and see your score update in real-time', color: 'accent' },
                   ].map((feature) => (
                     <div
                       key={feature.title}
@@ -208,8 +207,8 @@ const HomePage = () => {
             },
             {
               step: '03',
-              title: 'Optimize & Export',
-              desc: 'Edit inline with real-time scoring, compare with job descriptions, and download your refined resume.',
+              title: 'Optimize',
+              desc: 'real-time scoring, compare with job descriptions, and download your refined resume.',
               icon: '✨',
               gradient: 'from-primary-500/10 to-accent-500/5',
               borderHover: 'hover:border-primary-400/30',
@@ -234,26 +233,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Supported Formats */}
-      <section className="relative z-10 max-w-5xl mx-auto px-4 mt-24 mb-8">
-        <div className="glass-card-dark p-8 text-center">
-          <h3 className="text-lg font-display font-bold text-white mb-6">Supported Formats & Features</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {[
-              { icon: '📄', label: 'PDF Files', sub: '.pdf' },
-              { icon: '📝', label: 'Word Docs', sub: '.docx' },
-              { icon: '📋', label: 'Text Files', sub: '.txt' },
-              { icon: '✂️', label: 'Paste Text', sub: 'clipboard' },
-            ].map((fmt) => (
-              <div key={fmt.label} className="group px-4 py-5 rounded-xl bg-surface-800/30 border border-surface-700/30 hover:border-primary-500/20 transition-all duration-300 hover:-translate-y-0.5">
-                <div className="text-2xl mb-2">{fmt.icon}</div>
-                <div className="text-sm font-medium text-white">{fmt.label}</div>
-                <div className="text-xs text-surface-500 mt-1">{fmt.sub}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

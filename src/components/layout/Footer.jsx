@@ -10,9 +10,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-                <span className="text-white font-bold text-xs">RC</span>
+                <span className="text-white font-bold text-xs">CV</span>
               </div>
-              <span className="font-display font-bold text-lg text-white">ResumeChecker</span>
+              <span className="font-display font-bold text-lg text-white">CVCracker</span>
             </div>
             <p className="text-surface-400 text-sm leading-relaxed">
               AI-powered resume analysis and ATS optimization. Get real-time feedback to land your dream job.
@@ -25,7 +25,6 @@ const Footer = () => {
             <div className="space-y-2">
               <Link to="/" className="block text-surface-400 hover:text-primary-400 text-sm transition-colors">Upload Resume</Link>
               <Link to="/analysis" className="block text-surface-400 hover:text-primary-400 text-sm transition-colors">Analysis Dashboard</Link>
-              <Link to="/editor" className="block text-surface-400 hover:text-primary-400 text-sm transition-colors">Resume Editor</Link>
               <Link to="/job-match" className="block text-surface-400 hover:text-primary-400 text-sm transition-colors">Job Match</Link>
             </div>
           </div>
@@ -43,7 +42,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-white/5 text-center text-surface-500 text-sm">
-          © {new Date().getFullYear()} ResumeChecker. Built for job seekers.
+          © {new Date().getFullYear()} CVCracker. Built for job seekers.
         </div>
       </div>
     </footer>
