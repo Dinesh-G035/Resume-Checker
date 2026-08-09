@@ -10,7 +10,7 @@ A powerful, client-side web application built with React and Vite that analyzes,
 - **Job Description Matching:** Paste a target job description to get a customized keyword gap analysis and match percentage.
 - **Unified Scoring Dashboard:** Get a clear, out-of-100 score with interactive, expandable category breakdowns so you understand exactly why you lost points.
 - **Data Privacy First:** All file parsing and rule evaluation happens locally in your browser. No data is stored or sent to a server (unless using the optional AI improvement feature).
-- **AI-Powered Suggestions (Optional):** Context-aware bullet point improvements leveraging OpenAI/Claude APIs (includes a robust fallback engine if no API key is provided).
+- **AI-Powered Suggestions (Optional):** Context-aware bullet point improvements leveraging OpenAI.
 
 ## 🚀 Tech Stack
 
